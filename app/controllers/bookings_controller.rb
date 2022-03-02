@@ -1,4 +1,10 @@
 class BookingsController < ApplicationController
+
+  def index
+    @activity = Activity.find(params[:activity_id])
+    @bookings = Booking.where(activity: @activity)
+  end
+
   def new
     @activity = Activity.find(params[:activity_id])
     @booking = Booking.new
@@ -17,7 +23,6 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @activity = Activity.find(params[:activity_id])
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_path, notice: 'Booking has been successfully cancelled'
@@ -32,5 +37,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start, :end)
   end
-
 end

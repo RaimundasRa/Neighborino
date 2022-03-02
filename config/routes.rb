@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :areas do
     resources :activities do
-      resources :bookings, only: [:new, :create, :delete]
+      resources :bookings, only: [:index, :new, :create, :delete]
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
