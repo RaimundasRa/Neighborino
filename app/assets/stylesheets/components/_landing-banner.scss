@@ -1,0 +1,41 @@
+.landing-hero-banner {
+  height: 100vh;
+  //background: #f00;
+  //color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-banner-inner {
+  background: $yellow;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+
+.landing-hero-banner h1 {
+  font-size: 8rem;
+  font-family: $hero-font;
+  font-weight: 700;
+  width: 100%;
+}
+
+.landing-hero-banner p {
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.landing-hero-banner strong {
+  background: $blue;
+  padding: 0 0.2em;
+}
+
+.landing-hero-banner form {
+  text-align: center;
+}
