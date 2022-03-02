@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     @activity.user = current_user
-    @activity.area = @activity
+    # @activity.area = @activity
     if @activity.save
       redirect_to activities_path
     else
