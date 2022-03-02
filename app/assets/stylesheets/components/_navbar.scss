@@ -10,3 +10,22 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.logo-type {
+  font-family: $logo-font;
+  font-size: 2em;
+  line-height: 1em;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.logo-phrase {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+#navbutton {
+  text-decoration: none;
+  color: $coral;
+}
