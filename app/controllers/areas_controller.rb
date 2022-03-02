@@ -2,7 +2,7 @@ class AreasController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @area = Area.all
+    @areas = Area.all
   end
 
   def show
