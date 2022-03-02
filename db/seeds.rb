@@ -710,23 +710,54 @@ activities = %w[football
   chess\ club
   gaming\ club]
 
+areas = %w[Stratford St\ Mary\ Cray Croydon]
+  #   puts "WELCOME TO ULTIMATE SEED FILE V1.0"
 
-Activity.destroy_all
-User.destroy_all
-Area.destroy_all
+  #   if(gets.chomp! == 'Y')
+  #     puts "YAY"
+  #   end
+  # return
+
+#Activity.destroy_all
+#User.destroy_all
+#Area.destroy_all
 #Booking.destroy_all
 
 # Flat.near([40.71, 100.23], 20)
 
-db_density = 0.5
-max_users_per_area = 5
-max_activities_per_area = 10
+db_density = 1.0
+max_users_per_area = 10
+max_activities_per_user = 5
 
-puts 'ADDING AREAS TO DATABASE'
-puts "-------------------------\n"
+puts "MEGA SEED"
+puts "\n-----------------------------------------------\n"
+puts "DB Density: #{(db_density*100).to_i}%"
+puts "MAX Users per area: #{max_users_per_area}"
+puts "MAX Activities per user: #{max_activities_per_user}"
+puts "\n-----------------------------------------------\n"
+puts "Destroying existing activities..."
+  Activity.destroy_all
+puts "Destroying existing users..."
+  User.destroy_all
+puts "Destroying existing areas..."
+  Area.destroy_all
 
-areas.each do |area|
-  next if rand > db_density
+  areas_num = (areas.length*db_density).to_i
+
+puts "\n-----------------------------------------------\n"
+
+puts "Seeding #{areas_num} areas..."
+puts "NOTE: geocoding is limited to 1 query per second. it will take a minimum of #{(areas_num/60).to_i} minutes to seed the database..."
+puts "The database will be seeded with the following areas:\n"
+
+  selected_areas = areas.shuffle.first(areas_num)
+
+puts selected_areas.inspect
+
+  puts "\n-----------------------------------------------\n"
+    #return
+
+selected_areas.each do |area|
 
   new_area = Area.new(name: area, address: area)
   if new_area.save
@@ -736,7 +767,7 @@ areas.each do |area|
   end
 end
 
-puts "\n-------------------------"
+puts "\n-------------------------\n"
 puts "SUCCESSFULY ADDED #{Area.count} AREAS TO DATABASE"
 
 puts 'ADDING USERS TO DATABASE'
@@ -745,19 +776,17 @@ puts "-------------------------\n"
 areas = Area.all
 
 areas.each do |area|
-  next if rand > db_density
 
-    puts "ADDING USERS TO #{area.name}"
+    puts "  ADDING USERS TO #{area.name}"
 
     (rand * max_users_per_area).to_i.times do
 
       new_user = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.unique.email, password: 'genericpassword', password_confirmation: 'genericpassword', bio: Faker::GreekPhilosophers.quote)
       new_user.username = "#{new_user.first_name}#{new_user.last_name}"
       if new_user.save
-        next if rand > db_density
 
-        (rand * max_activities_per_area).to_i.times do
-            new_activity = Activity.new(name: activities.sample, location: area.name, user: new_user)
+        (rand * max_activities_per_user).to_i.times do
+            new_activity = Activity.new(name: activities.sample, user: new_user)
             if new_activity.save
 
             else
@@ -765,7 +794,7 @@ areas.each do |area|
         end
         puts "    ADDED #{new_user.activities.count} ACTIVITIES FOR #{new_user.username}"
       else
-        puts "error adding user #{new_user.username}"
+        puts "    error adding user #{new_user.username}"
       end
 
     end
