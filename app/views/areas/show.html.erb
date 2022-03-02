@@ -1,32 +1,71 @@
 <div class="container">
-<h1>Activities and categories in your area</h1>
+<h1>Things to do in your area</h1>
 
 <h3>Categories</h3>
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  </div>
 
+  <%= link_to area_activities_path(@area) do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+     Sports
+    </div>
+   <% end %>
+
+  <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
       Gardening
     </div>
+  <% end %>
 
+  <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
       Social
     </div>
+  <% end %>
 
+  <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
       Crafts
     </div>
+  <% end %>
 
+  <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
       Exchange
     </div>
+  <% end %>
 
+  <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
       Info
     </div>
+  <% end %>
+
   </div>
 
   <h3>Recently added activities</h3>
+
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2>whatever</h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
+
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2>Product name</h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
+
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2>Product name</h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
 
 </div>
