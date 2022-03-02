@@ -716,6 +716,8 @@ User.destroy_all
 Area.destroy_all
 #Booking.destroy_all
 
+# Flat.near([40.71, 100.23], 20)
+
 db_density = 0.5
 max_users_per_area = 5
 max_activities_per_area = 10
