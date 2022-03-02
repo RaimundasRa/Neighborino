@@ -1,7 +1,10 @@
-<h1>Well let's test this</h1>
+<div class="container">
+  <h1>Well let's test this</h1>
 
-<ul>
-<% @activities.each do |activity| %>
-<li><%= activity.name %></li>
-<% end %>
-</ul>
+  <ul>
+    <% @activities.each do |activity| %>
+    <li><%= activity.name %></li>
+    <% end %>
+  </ul>
+  <%= link_to "Back to area", area_path(@area) %>
+</div>
