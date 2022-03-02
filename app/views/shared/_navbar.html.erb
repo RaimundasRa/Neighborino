@@ -3,6 +3,7 @@
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "" %>
       <span class="logo-type">Neighborino</span>
+      <p class="logo-phrase">Discover your local community</p>
       </div>
     <% end %>
 
@@ -13,15 +14,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to "Host an activity", class: "nav-link" %></li>
+          <li id="navbutton" class="nav-item"><%= link_to "Host an activity", class: "nav-link" %></li>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "My booked activities", "#", class: "dropdown-item" %>
+              <%= link_to "My activity history", "#", class: "dropdown-item" %>
+              <%= link_to "My account", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
