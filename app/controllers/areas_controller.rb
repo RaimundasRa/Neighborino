@@ -6,6 +6,7 @@ class AreasController < ApplicationController
   end
 
   def show
+    @activities = Activity.first(3)
     @area = Area.find(params[:id])
   end
 end

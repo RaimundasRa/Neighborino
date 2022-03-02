@@ -44,28 +44,16 @@
 
   <h3>Recently added activities</h3>
 
+  <% @activities.each do |activity| %>
+  <%= link_to area_activity_path(activity) do %>
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     <div class="card-product-infos">
-      <h2>whatever</h2>
+      <h2><%= activity.name %></h2>
       <p>Product description with <strong>relevant info</strong> only.</p>
     </div>
   </div>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-    </div>
-  </div>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-    </div>
-  </div>
+  <% end %>
+  <% end %>
 
 </div>
