@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2022_03_02_104534) do
   create_table "areas", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "address"
   end
 
   create_table "bookings", force: :cascade do |t|
