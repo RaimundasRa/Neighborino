@@ -7,6 +7,5 @@ class AreasController < ApplicationController
 
   def show
     @area = Area.find(params[:id])
-    @area = Area.new
   end
 end
