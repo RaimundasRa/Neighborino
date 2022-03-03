@@ -3,7 +3,12 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update]
 
   def index
-    @activities = Activity.all
+    category = params[:category]
+    if category.nil?
+      @activities = Activity.all
+    else
+      @activities = Activity.where("name ILIKE ?", "%#{category}%")
+    end
   end
 
   def show

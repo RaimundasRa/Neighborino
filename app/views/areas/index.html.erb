@@ -5,15 +5,17 @@
 
   <div class="area-card-container mt-5 container">
     <% @areas.each do |area| %>
-    <div class="card-area">
+     <%= link_to area_path(area) do %>
+      <div class="card-area">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <div class="card-area-infos">
         <div>
-          <h2><%= link_to area.name, area_path(area) %></h2>
+          <h2><%= area.name %></h2>
           <p><%= area.address %></p>
         </div>
       </div>
     </div>
+    <% end %>
   <% end %>
   </div>
 </div>
