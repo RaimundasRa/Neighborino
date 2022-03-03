@@ -6,3 +6,4 @@ class Activity < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   has_many_attached :image, dependent: :destroy
 end
+#hello
