@@ -3,5 +3,8 @@
 <%= simple_form_for [ @area, @activity ] do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
+  <%= f.input :photo, multiple: true, as: :file %>
   <%= f.submit "Submit activity", class: "btn btn-primary" %>
 <% end %>
+
+<%#hello>
