@@ -24,8 +24,9 @@
   </ul>
   <br>
 
+<%# root is not alright??? %>
   <% @activities.each do |activity| %>
-    <%= link_to area_activities_path(activity) do %>
+    <%= link_to area_activity_path(@area, activity) do %>
     <div class="card-product activity-cards">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="card-product-infos">
