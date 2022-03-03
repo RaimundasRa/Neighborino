@@ -1,9 +1,11 @@
 <div class="container">
-<h1>Things to do in your area</h1>
+<h1>Things to do in <%= @area.name %></h1>
+<br>
 
 <h3>Categories</h3>
-  <div class="cards">
+<br>
 
+  <div class="cards">
   <%= link_to area_activities_path(@area) do %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
      Sports
@@ -42,18 +44,21 @@
 
   </div>
 
+  <br><br>
   <h3>Recently added activities</h3>
 
   <% @activities.each do |activity| %>
   <%= link_to area_activity_path(activity) do %>
-  <div class="card-product">
+  <div class="card-product activity-cards">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     <div class="card-product-infos">
-      <h2><%= activity.name %></h2>
+      <h2><%= activity.name.capitalize %></h2>
       <p>Product description with <strong>relevant info</strong> only.</p>
     </div>
   </div>
   <% end %>
   <% end %>
+
+  <%= link_to "Back to areas", areas_path %>
 
 </div>
