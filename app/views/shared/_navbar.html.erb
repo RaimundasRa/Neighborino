@@ -15,13 +15,13 @@
         <% if user_signed_in? %>
 
           <% unless @area.nil? %>
-          <li id="navbutton" class="nav-item"> <%= link_to "Host an activity", new_area_activity_path(@area, @activity), class: "nav-link" %></li>
+          <li class="nav-item"> <%= link_to "Host an activity", new_area_activity_path(@area, @activity), class: "nav-link" %></li>
           <% end %>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My booked activities", "#", class: "dropdown-item" %>
+              <%= link_to "My booked activities", my_bookings_path(@area, @activity, @booking), class: "dropdown-item" %>
               <%= link_to "My activity history", "#", class: "dropdown-item" %>
               <%= link_to "My account", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

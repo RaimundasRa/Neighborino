@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  # get '/activities/my_bookings/', to: 'bookings#show_my_bookings', as: :my_bookings
+  get '/activities/my_bookings/', to: 'bookings#show_my_bookings', as: :my_bookings
 
   resources :areas do
     resources :activities do
