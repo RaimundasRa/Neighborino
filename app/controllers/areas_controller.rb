@@ -2,7 +2,7 @@ class AreasController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    if params['location'].empty?
+    unless params['location']
       @areas = Area.limit(6).order("RANDOM()")
     else
       @areas = Area.near(params['location'], 2)
@@ -10,7 +10,6 @@ class AreasController < ApplicationController
   end
 
   def show
-
     @activities = Activity.first(3)
     @area = Area.find(params[:id])
   end
