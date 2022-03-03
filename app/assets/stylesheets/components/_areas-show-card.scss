@@ -49,18 +49,17 @@
   text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+.card-category {
   padding: 5px;
-  transition: transform .3s; /* Animation */
+  transition: transform .4s; /* Animation */
 }
 
-a:hover {
-  transform: scale(1.1);
+.card-category:hover {
+  transform: scale(1.05);
 }
 
 .activity-cards {
-  transition: transform .2s;
+  transition: transform .3s;
 }
 
 .activity-cards:hover {
