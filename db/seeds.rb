@@ -711,6 +711,21 @@ activities = %w[football
   gaming\ club]
 
 areas = %w[Stratford St\ Mary\ Cray Croydon]
+
+areas = %w[Mill\ Meads
+  Plaistow
+  Stratford\ Marsh
+  Temple\ Mills
+  St\ Mary\ Cray
+  Poverest
+  Derry\ Downs
+  Orpington
+  Croydon
+  Wandle\ Park
+  South\ Croydon
+  Addiscombe]
+
+
   #   puts "WELCOME TO ULTIMATE SEED FILE V1.0"
 
   #   if(gets.chomp! == 'Y')
