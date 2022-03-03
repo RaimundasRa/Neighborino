@@ -3,28 +3,28 @@
   <br>
 
   <ul class="list-inline tabs-underlined">
-  <li>
-    <a href="#" class="tab-underlined active">Sports</a>
+  <li class="tab-underlined">
+    <%= link_to "Sports", "#{area_activities_path(@area)}?category=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
   </li>
-  <li>
-    <a href="#" class="tab-underlined">Gardening</a>
+  <li class="tab-underlined">
+    <%= link_to "Gardening", "#{area_activities_path(@area)}?category=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
   </li>
-  <li>
-    <a href="#" class="tab-underlined">Social</a>
+  <li class="tab-underlined">
+    <%= link_to "Social", "#{area_activities_path(@area)}?category=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
   </li>
-  <li>
-    <a href="#" class="tab-underlined">Crafts</a>
+  <li class="tab-underlined">
+    <%= link_to "Crafts", "#{area_activities_path(@area)}?category=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
   </li>
-  <li>
-    <a href="#" class="tab-underlined">Exchange</a>
+  <li class="tab-underlined">
+    <%= link_to "Exchange", "#{area_activities_path(@area)}?category=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
   </li>
-  <li>
-    <a href="#" class="tab-underlined">Info</a>
+  <li class="tab-underlined">
+    <%= link_to "Info", "#{area_activities_path(@area)}?category=info", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
   </li>
   </ul>
   <br>
 
-<%# root is not alright??? %>
+
   <% @activities.each do |activity| %>
     <%= link_to area_activity_path(@area, activity) do %>
     <div class="card-product activity-cards">
