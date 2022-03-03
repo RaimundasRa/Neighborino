@@ -24,6 +24,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    @activity.address = @area.address
   end
 
   def create
@@ -48,6 +49,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :location)
+    params.require(:activity).permit(:name, :address, :photo)
   end
 end
