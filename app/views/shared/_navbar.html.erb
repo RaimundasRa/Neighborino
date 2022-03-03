@@ -22,7 +22,6 @@
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My booked activities", my_bookings_path(@area, @activity, @booking), class: "dropdown-item" %>
-              <%= link_to "My activity history", "#", class: "dropdown-item" %>
               <%= link_to "My account", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>

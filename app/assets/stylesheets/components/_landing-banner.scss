@@ -17,11 +17,14 @@
   align-items: center;
   padding: 50px;
 }
-
+.landing-banner-btn{
+  margin-top: 10%;
+}
 
 .landing-hero-banner h1 {
   font-size: 8rem;
-  font-family: $hero-font;
+  font-family: $logo-font;
+  color: $cream;
   font-weight: 700;
   width: 100%;
 }
@@ -31,9 +34,23 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.postcode-input{
+  font-size: 2rem;
+  text-align: center;
+}
+
+@keyframes seizure {
+  0% { background-color: $coral; }
+  33% { background-color:$green; }
+  66% { background-color:$blue; }
+  100% { background-color:$coral; }
+}
+
 .landing-hero-banner strong {
-  background: $blue;
-  padding: 0 0.2em;
+  background: $coral;
+  padding: 0.1em 0.3em;
+  animation: seizure 0.5s infinite;
+  border-radius: 10px;
 }
 
 .landing-hero-banner form {
