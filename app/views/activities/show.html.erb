@@ -1,6 +1,6 @@
 <div class="container">
   <h2><strong><%= @activity.name %></strong></h2>
   <h3><%= @activity.address %></h3>
-
-  <%= link_to "Back to activities list", area_activities_path %>
+  <%= link_to "Back to activities list", area_activities_path, class: "btn btn-primary" %>
+  <%= link_to "Book this activity", new_area_activity_booking_path, class: "btn btn-primary" %>
 </div>
