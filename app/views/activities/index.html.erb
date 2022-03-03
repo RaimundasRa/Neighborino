@@ -1,10 +1,40 @@
 <div class="container">
-  <h1>Well let's test this</h1>
+  <h1>List of activities in this category</h1>
+  <br>
 
-  <ul>
-    <% @activities.each do |activity| %>
-    <li><%= activity.name %></li>
-    <% end %>
+  <ul class="list-inline tabs-underlined">
+  <li>
+    <a href="#" class="tab-underlined active">Sports</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Gardening</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Social</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Crafts</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Exchange</a>
+  </li>
+  <li>
+    <a href="#" class="tab-underlined">Info</a>
+  </li>
   </ul>
-  <%= link_to "Back to area", area_path(@area) %>
+  <br>
+
+  <% @activities.each do |activity| %>
+    <%= link_to area_activities_path(activity) do %>
+    <div class="card-product activity-cards">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= activity.name.capitalize %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+
+    <%= link_to "Back to area", area_path(@area) %>
 </div>
