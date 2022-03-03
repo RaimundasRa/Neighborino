@@ -14,7 +14,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li id="navbutton" class="nav-item"><%= link_to "Host an activity", new_area_activity_path(@area, @activity), class: "nav-link" %></li>
+          <% unless @area.nil? %>
+          <li id="navbutton" class="nav-item"> <%= link_to "Host an activity", new_area_activity_path(@area, @activity), class: "nav-link" %></li>
+          <% end %>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
