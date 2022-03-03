@@ -1,0 +1,7 @@
+<h1>Create a new activity in <%=@area.name%></h1>
+
+<%= simple_form_for [ @area, @activity ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.submit "Submit activity", class: "btn btn-primary" %>
+<% end %>
