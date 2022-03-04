@@ -38,3 +38,4 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start, :end)
   end
 end
+#hello
