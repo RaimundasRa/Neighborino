@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/activities/my_bookings/', to: 'bookings#show_my_bookings', as: :my_bookings
-
   resources :areas do
     resources :activities do
       resources :bookings, only: [:index, :new, :create, :destroy, :delete]
