@@ -742,7 +742,7 @@ areas = %w[Mill\ Meads
 
 db_density = 1.0
 max_users_per_area = 10
-max_activities_per_user = 5
+max_activities_per_user = 10
 
 puts "MEGA SEED"
 puts "\n-----------------------------------------------\n"
