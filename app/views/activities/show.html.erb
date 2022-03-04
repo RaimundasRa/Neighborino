@@ -1,8 +1,8 @@
 <div class="container">
-  <h2><strong><%= @activity.name %></strong></h2>
+  <h2><strong><%= @activity.name.capitalize %></strong></h2>
   <h3><%= @activity.address %></h3>
 
-<div style="width: 100%">
+<div style="width: 50%">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,13 +11,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/400/150" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/400/150" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="https://picsum.photos/400/150" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -30,6 +30,27 @@
     </button>
   </div>
 </div>
+
+<div class="d-flex justify-content-between">
+  <div class="col-12">
+      <h4 class="text-left sub-heading">Activity description</h4>
+      <p style="margin: 0 auto">@activity.description</p>
+  </div>
+</div>
+
+
+<div class="d-flex justify-content-between">
+  <div class="col-6">
+      <h4><small>Start date</small></h4>
+      <p>@activity.start</p>
+  </div>
+
+  <div class="col-6">
+    <h4><small>End date</small></h4>
+    <p>@activity.end</p>
+  </div>
+</div>
+
    <%= link_to "Book this activity", new_area_activity_booking_path(@area, @activity), class: "btn btn-primary" %>
    <%= link_to "Back to activities list", area_activities_path, class: "btn btn-primary" %>
 </div>
