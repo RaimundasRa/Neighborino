@@ -19,6 +19,7 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :photo %>
+    <%= f.input :area_id, collection: areas_list %>
   </div>
 
   <div class="form-actions">

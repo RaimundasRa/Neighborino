@@ -796,7 +796,7 @@ areas.each do |area|
 
     (rand * max_users_per_area).to_i.times do
 
-      new_user = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.unique.email, password: 'genericpassword', password_confirmation: 'genericpassword', bio: Faker::GreekPhilosophers.quote)
+      new_user = User.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.unique.email, area: area, password: 'genericpassword', password_confirmation: 'genericpassword', bio: Faker::GreekPhilosophers.quote)
       new_user.username = "#{new_user.first_name}#{new_user.last_name}"
       if new_user.save
 
