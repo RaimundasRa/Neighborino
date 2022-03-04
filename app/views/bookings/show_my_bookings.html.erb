@@ -1,11 +1,23 @@
-
-<h2>Diddly! These are my bookings 📝</h2>
-
 <div class="container">
-<% @bookings.each do |booking| %>
-  <%= booking.user  %>
-  <%= booking.start  %>
-  <%= booking.end  %>
-<% end %>
+  <h2>Diddly! These are my bookings 📝</h2>
+    <% @bookings.each do |booking| %>
 
+    <div class="card-product" style="margin:10px 0;">
+
+      <%= link_to (image_tag activity_photo_url(booking.activity)), area_activity_path(booking.user.area, booking.activity) %>
+
+      <div class="card-product-infos">
+        <h2><%= link_to booking.activity.name, area_activity_path(booking.user.area, booking.activity)%></h2>
+        <p><strong>Check-in:</strong> <%= booking.start.nil? ? 'no date specified' : booking.start.strftime('%Y-%m-%d') %><br>
+        <strong>Check-out: </strong> <%= booking.end.nil? ? 'no date specified' : booking.end.strftime('%Y-%m-%d') %><br>
+      </div>
+
+      <div style="float: right; margin-left: 50px;">
+        <%= link_to "View", area_activity_path(booking.user.area, booking.activity), class: 'btn btn-dark' %>
+
+        <%= link_to "Cancel", area_activity_booking_path(area_id: booking.user.area, activity_id: booking.activity.id, id: booking.id), class: 'btn btn-dark', remote: true, method: :delete, data: {confirm: "Are you sure you want to cancel?"} %>
+
+      </div>
+    </div>
 </div>
+<% end %>

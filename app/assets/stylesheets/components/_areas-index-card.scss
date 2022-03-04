@@ -2,6 +2,11 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform .4s;
+}
+
+.card-area:hover {
+  transform: scale(1.05);
 }
 
 .card-area > img {
@@ -23,7 +28,6 @@
   opacity: .7;
   margin: 0;
 }
-
 
 .card-area .card-area-infos {
   padding: 16px;

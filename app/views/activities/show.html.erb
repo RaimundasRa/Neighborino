@@ -1,5 +1,5 @@
 <div class="container">
-  <h2><strong><%= @activity.name %></strong></h2>
+  <h2><strong><%= @activity.name.capitalize %></strong></h2>
   <h3><%= @activity.address %></h3>
 
 <div style="width: 100%">
@@ -11,13 +11,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="<%= activity_photo_url(@activity) %>" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="<%= activity_photo_url(@activity) %>" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://picsum.photos/200/150" class="d-block w-100" alt="...">
+        <img src="<%= activity_photo_url(@activity) %>" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -29,7 +29,10 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+    <h3>This activity starts at: <%= @activity.starts_at %></h3>
+  <h3>Until: <%= @activity.ends_at %></h3>
 </div>
    <%= link_to "Book this activity", new_area_activity_booking_path(@area, @activity), class: "btn btn-primary" %>
    <%= link_to "Back to activities list", area_activities_path, class: "btn btn-primary" %>
+
 </div>
