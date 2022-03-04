@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.activity = @activity
     if @booking.save
-      redirect_to bookings_path
+      redirect_to my_bookings_path
     else
       render :new
     end
@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path, notice: 'Booking has been successfully cancelled'
+    redirect_to my_bookings_path, notice: 'Booking has been successfully cancelled'
   end
 
   def show_my_bookings
