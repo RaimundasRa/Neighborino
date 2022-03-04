@@ -88,8 +88,6 @@ ActiveRecord::Schema.define(version: 2022_03_03_153820) do
     t.string "last_name"
     t.string "username"
     t.text "bio"
-    t.bigint "area_id", null: false
-    t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -99,5 +97,4 @@ ActiveRecord::Schema.define(version: 2022_03_03_153820) do
   add_foreign_key "activities", "users"
   add_foreign_key "bookings", "activities"
   add_foreign_key "bookings", "users"
-  add_foreign_key "users", "areas"
 end
