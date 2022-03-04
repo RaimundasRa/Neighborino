@@ -3,7 +3,7 @@ module ApplicationHelper
     if activity.photo.attached?
       cloudinary_url(activity.photo.key)
     else
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1645788291/Space-BNB/wp1923649_ih89r9.jpg'
+      "https://picsum.photos/900/400?random=#{rand(100)}"
     end
   end
 

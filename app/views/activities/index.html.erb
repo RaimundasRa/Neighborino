@@ -25,10 +25,10 @@
   <br>
 
 
-  <% @activities.each do |activity| %>
+  <% @activities.each_with_index do |activity, index| %>
     <%= link_to area_activity_path(@area, activity) do %>
     <div class="card-product activity-cards">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <img src="https://picsum.photos/200?random=<%= index %>" />
       <div class="card-product-infos">
         <h2><%= activity.name.capitalize %></h2>
         <p>Product description with <strong>relevant info</strong> only.</p>
