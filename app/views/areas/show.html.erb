@@ -48,19 +48,19 @@
   <br><br>
   <h3>Recently added activities</h3>
 
-<div class="cards-activity">
-  <% @activities.each_with_index do |activity, index| %>
-  <%= link_to area_activity_path(activity) do %>
-  <div class="card-product activity-cards">
-    <img src="https://picsum.photos/200?random=<%= index %>" />
-    <div class="card-product-infos">
-      <h2><%= activity.name.capitalize %></h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+  <div class="cards-activity">
+    <% @activities.each_with_index do |activity, index| %>
+    <%= link_to area_activity_path(activity) do %>
+    <div class="card-product activity-cards">
+      <img src="https://picsum.photos/200?random=<%= index %>" />
+      <div class="card-product-infos">
+        <h2><%= activity.name.capitalize %></h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
     </div>
+    <% end %>
+    <% end %>
   </div>
-  <% end %>
-  <% end %>
-</div>
 
   <div class="back-button">
     <%= link_to "Back to areas", areas_path %>
