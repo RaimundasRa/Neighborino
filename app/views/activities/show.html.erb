@@ -59,16 +59,17 @@
   </div>
 </div>
 
-<br><br>
-   <%= link_to "Book this activity", new_area_activity_booking_path(@area, @activity), class: "btn btn-primary" %>
 
    <!-- create new @booking, simple form, submit-->
-<div class= "btn btn-primary">
+<div>
 <%= simple_form_for(@booking, url: area_activity_bookings_path(@area, @activity)) do |f| %>
   <%= f.input :start, as: :hidden, value: @activity.starts_at %>
   <%= f.input :end, as: :hidden, value: @activity.ends_at %>
-  <%= f.submit %>
+  <%= f.button :submit, "Create booking", class: "btn btn-primary" %>
 <% end %>
 </div>
-   <%= link_to "Back to activities list", area_activities_path, class: "btn btn-primary" %>
+
+
+<%= link_to "Back to activities list", area_activities_path, class: "btn btn-primary" %>
+
 </div>
