@@ -48,6 +48,7 @@
   <br><br>
   <h3>Recently added activities</h3>
 
+<div class="cards-activity">
   <% @activities.each_with_index do |activity, index| %>
   <%= link_to area_activity_path(activity) do %>
   <div class="card-product activity-cards">
@@ -59,7 +60,10 @@
   </div>
   <% end %>
   <% end %>
+</div>
 
-  <%= link_to "Back to areas", areas_path %>
+  <div class="back-button">
+    <%= link_to "Back to areas", areas_path %>
+  </div>
 
 </div>

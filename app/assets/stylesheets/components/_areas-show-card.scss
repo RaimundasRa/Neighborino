@@ -1,4 +1,5 @@
 .card-product {
+  border-radius: 5px;
   margin-bottom: 10px;
   overflow: hidden;
   height: 120px;
@@ -22,13 +23,13 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
