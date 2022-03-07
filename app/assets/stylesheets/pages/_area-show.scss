@@ -4,12 +4,28 @@
   text-align: center;
   color: $cream;
   padding: 0.6em;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.title-text-card-container{
+  margin-top: 30px;
+}
+
+#area-title-card{
+  margin-bottom: 0;
+}
+.area-title h1{
+  margin: 0;
+  font-family: $logo-font;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 30px;
+  margin-top: -10px;
 }
 
 .cards-activity {
