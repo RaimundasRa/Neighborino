@@ -1,5 +1,17 @@
 <div class="container">
   <h2>Diddly! These are my bookings 📝</h2>
+
+
+<!-- Tabs to select activities -->
+<ul class="list-inline tabs-underlined">
+  <li class="tab-underlined">
+    <%= link_to "Upcoming events", "#" %>
+  </li>
+  <li class="tab-underlined">
+    <%= link_to "My created events", "#" %>
+  </li>
+</ul>
+
     <% @bookings.each do |booking| %>
 
     <div class="card-product" style="margin:10px 0;">
