@@ -1,4 +1,6 @@
-<div class="container">
+<%# <div class="container"> %>
+  <div class="row no-margin">
+    <div class="column col-6">
   <h1>List of activities in this category</h1>
   <br>
 
@@ -24,7 +26,6 @@
   </ul>
   <br>
 
-
   <% @activities.each_with_index do |activity, index| %>
     <%= link_to area_activity_path(@area, activity) do %>
     <div class="card-product activity-cards">
@@ -33,9 +34,17 @@
         <h2><%= activity.name.capitalize %></h2>
         <p>Product description with <strong>relevant info</strong> only.</p>
       </div>
+      <div>
+     <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar-bordered" %>
+    </div>
     </div>
     <% end %>
     <% end %>
+  </div>
+
+  <div class="column col-6 map-box-vertical">
+      <img id="sticky-map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/1.346,48.8595,11.72,0,0/1200x400?access_token=pk.eyJ1Ijoic2FqaWZpbyIsImEiOiJjbDA5amVzcDMwMGw3M2JwdDI0M3ZwbXVmIn0.87lNDe_z7JyUZ-9LyvJn1w'></div>
+  </div>
 
     <%= link_to "Back to area", area_path(@area) %>
-</div>
+<%# </div> %>
