@@ -10,6 +10,10 @@
 
 }
 
+.card-short {
+  max-width: 650px;
+}
+
 .card-product img {
   height: 100%;
   width: 120px;
@@ -58,11 +62,12 @@
 
 .card-category {
   padding: 5px;
-  transition: transform .4s; /* Animation */
+  transition: transform .6s, box-shadow 0.3s ease-in-out; /* Animation */
 }
 
 .card-category:hover {
   transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .activity-cards {

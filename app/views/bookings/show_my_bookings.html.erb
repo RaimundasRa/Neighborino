@@ -14,7 +14,7 @@
 
     <% @bookings.each do |booking| %>
 
-    <div class="card-product" style="margin:10px 0;">
+    <div class="card-product card-short" style="margin:10px 0;">
 
       <%= link_to (image_tag activity_photo_url(booking.activity)), area_activity_path(booking.user.area, booking.activity) %>
 
