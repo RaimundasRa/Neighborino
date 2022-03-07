@@ -2,6 +2,8 @@ module ApplicationHelper
   def activity_photo_url(activity)
     if activity.photo.attached?
       cloudinary_url(activity.photo.key)
+    elsif activity.aux_image_url
+      activity.aux_image_url
     else
       "https://picsum.photos/900/400?random=#{rand(100)}"
     end

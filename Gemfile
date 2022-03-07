@@ -71,3 +71,5 @@ gem 'cloudinary', '~> 1.16.0'
 gem "faker", "~> 2.19"
 
 gem "geocoder", "~> 1.7"
+
+gem 'pg_search', '~> 2.3.0'

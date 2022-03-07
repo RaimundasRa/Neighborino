@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_153820) do
+ActiveRecord::Schema.define(version: 2022_03_07_150024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(version: 2022_03_03_153820) do
     t.float "longitude"
     t.datetime "starts_at"
     t.datetime "ends_at"
+    t.text "description"
+    t.string "tags"
+    t.string "aux_image_url"
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
