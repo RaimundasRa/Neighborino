@@ -1,13 +1,37 @@
-<div class="activities-banner"><img class="img-fluid new-activity-banner container-fluid" src= "https://res.cloudinary.com/dqat8a2hi/image/upload/v1646660207/neighbourino%20%28Neighborino%29-production/Site/bbq_jkenuu.jpg">
+<div class="d-flex card-area-new bg-blue">
+  <p class="text-center">Become a host</p>
 </div>
 
-<h1>Create a new activity in <%=@area.name%></h1>
+<div class="container">
+</div>
 
-<%= simple_form_for [ @area, @activity ] do |f| %>
+<div class="d-flex card-area-new bg-blue">
+  <h2 class="text-center">Become a host</h2>
+    <p>Connect with your neighbours in <%=@area.name%></p>
+  <hr>
+  <%= simple_form_for [ @area, @activity ] do |f| %>
   <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :starts_at %>
-  <%= f.input :ends_at %>
+</div>
+
+<div class="d-flex card-area-new bg-blue">
+  <h2 class="text-center">Become a host</h2>
+    <p>Connect with your neighbours in <%=@area.name%></p>
+  <hr>
+<%= f.input :address %>
+</div>
+
+<div class="d-flex card-area-new bg-blue">
+  <h2 class="text-center">Become a host</h2>
+<%= f.input :starts_at %>
+<%= f.input :ends_at %>
+</div>
+
+<div class="d-flex card-area-new bg-blue">
+  <h2 class="text-center">Become a host</h2>
+</div>
+
+<div class="container">
   <%= f.input :photo, multiple: true, as: :file %>
   <%= f.submit "Submit activity", class: "btn btn-primary" %>
-<% end %>
+  <% end %>
+</div>

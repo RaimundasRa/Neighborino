@@ -1,4 +1,35 @@
-.activities-banner{
+.card-area-new h2 {
+  font-size: 50px;
+  font-family: $headers-font;
+  letter-spacing: -2px;
+  font-size: 3em;
   height: 200px;
-  width: 100px;
+}
+
+.card-area-new p {
+  font-size: 20px;
+  font-family: $body-font;
+}
+
+.card-area-new {
+  color: $cream;
+  height: 4em;
+  padding: 0.5em 1em;
+  display: table-cell;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card .subtle {
+  color: #000;
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.bg-blue {
+  background: -webkit-linear-gradient(110deg, $blue 60%, #99c1cf 60%);
+  background: -o-linear-gradient(110deg, $blue 60%, #99c1cf 60%);
+  background: -moz-linear-gradient(110deg, $blue 60%, #99c1cf 60%);
+  background: linear-gradient(110deg, $blue 60%, #99c1cf 60%);
 }
