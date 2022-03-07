@@ -3,12 +3,24 @@
   background: $yellow;
 }
 
+.nav-item li{
+  width: 100px;
+}
+
+.navbar-lewagon a {
+  color: $gray;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand {
+  align-items: center;
 }
 
 .logo-type {
@@ -28,4 +40,8 @@
 #navbutton {
   text-decoration: none;
   color: $coral;
+}
+
+.options-container{
+  color: grey;
 }
