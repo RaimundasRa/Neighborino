@@ -16,7 +16,9 @@ class AreasController < ApplicationController
   end
 
   def show
-    @activities = Activity.first(6)
+    #@activities = Activity.first(6)
     @area = Area.find(params[:id])
+    #@activities = Activity.includes(:user).where(user: {area: @area}).limit(6)
+    @activities = Activity.includes(:user).where(user: {area_id: @area.id})
   end
 end
