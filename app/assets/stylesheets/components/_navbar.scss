@@ -9,6 +9,10 @@
   width: 100px;
 }
 
+.avatar {
+  margin-top: 6px;
+}
+
 .navbar-lewagon a {
   color: $gray;
 }
@@ -49,11 +53,14 @@
 }
 
 #host-button{
-  background-color: #ff3e4173;
   text-align: center;
   border-radius: 25px;
   padding: 5px;
   margin-right: 10px;
+}
+
+#host-button:hover{
+  background-color: #ff3e4173;
 }
 
 #host-button a{
