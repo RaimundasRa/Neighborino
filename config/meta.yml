@@ -1,0 +1,5 @@
+meta_product_name: "Neighborino"
+meta_title: "Neighborino - Connect locally"
+meta_description: "Connect with your local community"
+meta_image: "favicon.png" # should exist in `app/assets/images/`
+twitter_account: "@Neighborino"   # required for Twitter Cards
