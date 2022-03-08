@@ -57,10 +57,15 @@
   border-radius: 25px;
   padding: 5px;
   margin-right: 10px;
+  // transition: transform 0.3s;
+  // box-shadow 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 #host-button:hover{
   background-color: #ff3e4173;
+  // transform: scale(1.0009);
+  // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 #host-button a{
