@@ -54,7 +54,7 @@
       <img src="<%= activity_photo_url(activity) %>" />
       <div class="card-product-infos">
         <h2><%= activity.name.capitalize %></h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p><%= activity_description_cap(activity, 85) %></p>
       </div>
     <div>
      <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar-bordered" %>

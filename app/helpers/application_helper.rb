@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def activity_description_cap(activity, maxlen)
+    "#{activity.description[0...maxlen]}..."
+  end
+
   def areas_list
     Area.all
   end
