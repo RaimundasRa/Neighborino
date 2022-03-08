@@ -2,6 +2,7 @@
   <div class="activities-index-left">
     <div class="left-container d-flex flex-column align-items-center">
 
+
     <div class="w-100 d-flex flex-column align-items-start">
       <%= link_to "Back to area", area_path(@area), class: "btn btn-outline-primary my-3" %>
       <h1>List of activities in this category</h1>
@@ -10,22 +11,22 @@
 
       <ul class="list-inline tabs-underlined">
         <li class="tab-underlined">
-          <%= link_to "Sports", "#{area_activities_path(@area)}?category=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
+          <%= link_to "Sports", "#{area_activities_path(@area)}?query=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Gardening", "#{area_activities_path(@area)}?category=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
+          <%= link_to "Gardening", "#{area_activities_path(@area)}?query=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Social", "#{area_activities_path(@area)}?category=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
+          <%= link_to "Social", "#{area_activities_path(@area)}?query=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Crafts", "#{area_activities_path(@area)}?category=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
+          <%= link_to "Crafts", "#{area_activities_path(@area)}?query=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Exchange", "#{area_activities_path(@area)}?category=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
+          <%= link_to "Exchange", "#{area_activities_path(@area)}?query=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Info", "#{area_activities_path(@area)}?category=info", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
+          <%= link_to "Info", "#{area_activities_path(@area)}?query=information", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
         </li>
       </ul>
 
@@ -36,7 +37,7 @@
               <img src="<%= activity_photo_url(activity) %>" />
               <div class="card-product-infos">
                 <h2><%= activity.name.capitalize %></h2>
-                <p>Product description with <strong>relevant info</strong> only.</p>
+                 <p><%= activity_description_cap(activity, 85) %></p>
               </div>
               <div>
               <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar-bordered-index" %>

@@ -3,11 +3,13 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update]
 
   def index
-    category = params[:category]
-    if category.nil?
-      @activities = Activity.all
+    #category = params[:query]
+    if params[:query].present?
+      @activities = Activity.search(params[:query]).shuffle
     else
-      @activities = Activity.where("name ILIKE ?", "%#{category}%")
+      @activities = Activity.first(12).shuffle
+      #@activities = Activity.search(params[:query])
+      #activities = Activity.where("name ILIKE ?", "%#{category}%")
     end
     @markers = @activities.geocoded.map do |activity|
       {
