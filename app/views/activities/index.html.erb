@@ -11,22 +11,22 @@
 
       <ul class="list-inline tabs-underlined">
         <li class="tab-underlined">
-          <%= link_to "Sports", "#{area_activities_path(@area)}?query=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
+          <%= link_to "Sports", "#{area_activities_path(@area)}?query=sports", class: (params[:query]&.include?("sports") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Gardening", "#{area_activities_path(@area)}?query=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
+          <%= link_to "Gardening", "#{area_activities_path(@area)}?query=gardening", class: (params[:query]&.include?("gardening") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Social", "#{area_activities_path(@area)}?query=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
+          <%= link_to "Social", "#{area_activities_path(@area)}?query=social", class: (params[:query]&.include?("social") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Crafts", "#{area_activities_path(@area)}?query=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
+          <%= link_to "Crafts", "#{area_activities_path(@area)}?query=crafts", class: (params[:query]&.include?("crafts") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Exchange", "#{area_activities_path(@area)}?query=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
+          <%= link_to "Exchange", "#{area_activities_path(@area)}?query=exchange", class: (params[:query]&.include?("exchange") ? "active" : "inactive") %>
         </li>
         <li class="tab-underlined">
-          <%= link_to "Info", "#{area_activities_path(@area)}?query=information", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
+          <%= link_to "Info", "#{area_activities_path(@area)}?query=information", class: (params[:query]&.include?("info") ? "active" : "inactive") %>
         </li>
       </ul>
 
