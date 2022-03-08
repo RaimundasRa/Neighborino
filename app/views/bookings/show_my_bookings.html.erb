@@ -1,4 +1,4 @@
-<h2 class="bg-coral"> These are my bookings </h2>
+<h2 class="bg-coral my-0"> These are my bookings </h2>
 <div class="container d-flex flex-column">
 
 <!-- Tabs to select activities -->
@@ -30,4 +30,10 @@
       </div>
     </div>
 <% end %>
+
+  <div class="input-buttons">
+    <%= link_to "Back to activities list", area_activities_path(@area), class: "btn btn-outline-primary my-3" %>
+
+    <%= link_to "Back to area", area_path(@area), class: "btn btn-outline-primary my-3 mx-3" %>
+  </div>
 </div>
