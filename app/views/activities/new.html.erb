@@ -11,7 +11,7 @@
   <%= f.input :name, label: false %>
 </div>
 
-<div class="d-flex card-area-new bg-blue">
+<div class="d-flex card-area-new bg-blue right-side">
   <h2 class="text-start">Where is your event taking place?</h2>
 <%= f.input :address, label: false  %>
 </div>
@@ -22,7 +22,7 @@
       <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
 </div>
 
-<div class="d-flex card-area-new bg-yellow">
+<div class="d-flex card-area-new bg-yellow right-side">
   <h2 class="text-start">Description</h2>
   <%= f.input :description, label: false  %>
 </div>
@@ -32,7 +32,7 @@
     <%= f.input :photo, multiple: true, as: :file, label: false %>
 </div>
 
-<div class="d-flex card-area-new bg-blue">
+<div class="d-flex card-area-new bg-blue right-side">
   <h2 class="text-start">Add tags to your activity</h2>
   <p>This will help neighborinos find your activity</p>
   <%= f.input :tags, as: :check_boxes, collection: ['Sports','Gardening','Social','Crafts','Exchange','Info'], wrapper: :vertical_collection_inline %>

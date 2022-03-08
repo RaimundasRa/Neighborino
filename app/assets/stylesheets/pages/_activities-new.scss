@@ -48,7 +48,10 @@
   font-family: $logo-font;
   font-size: 3vh;
 }
-
+.right-side{
+  text-align: end;
+  align-items: flex-end;
+}
 .card .subtle {
   color: #000;
   font-size: 0.5em;
