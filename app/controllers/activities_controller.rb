@@ -11,6 +11,12 @@ class ActivitiesController < ApplicationController
       #@activities = Activity.search(params[:query])
       #activities = Activity.where("name ILIKE ?", "%#{category}%")
     end
+    @markers = @activities.geocoded.map do |activity|
+      {
+        lat: activity.latitude,
+        lng: activity.longitude
+      }
+    end
   end
 
   def show

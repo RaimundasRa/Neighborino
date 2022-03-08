@@ -7,6 +7,12 @@ class AreasController < ApplicationController
     else
       @areas = Area.near(params['location'], 2)
     end
+      @markers = @areas.geocoded.map do |area|
+      {
+        lat: area.latitude,
+        lng: area.longitude
+      }
+    end
   end
 
   def show
