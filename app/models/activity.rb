@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  include PgSearch::Model
+
 
   belongs_to :user
   has_many :users, through: :bookings
@@ -8,9 +8,12 @@ class Activity < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   has_one_attached :photo, dependent: :destroy
 
-  pg_search_scope :search_by_name_description_and_tags,
-  against: [ :name, :description, :tags ],
+  include PgSearch
+  include PgSearch::Model
+
+  pg_search_scope :search,
+  against: [ :tags, :name, :description ],
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true, any_word: true } # <-- now `superman batm` will return something!
     }
 end

@@ -697,7 +697,7 @@ activities = %w[rock\ climbing
   tennis\ club
   running\ club
   welding\ workshop
-  pottery\ workshop
+
   art\ workshop
   chess\ club
   gaming\ club]
@@ -872,6 +872,7 @@ def create_activity(area, organiser)
 
   new_activity.name = template[:name].sub('%area%', area.name)
   new_activity.description = template[:description].sub('%area%', area.name)
+  new_activity.tags = template[:tags]
 
   if template[:image_url]
     new_activity.aux_image_url = template[:image_url]
