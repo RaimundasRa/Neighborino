@@ -1,11 +1,10 @@
 #text-banner-area{
   font-size: 1.4em;
-  text-align: center;
-  color: $blue;
+  height: auto;
 }
 
 .card-area-new h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: $headers-font;
   letter-spacing: -2px;
   font-size: 3em;
@@ -28,10 +27,9 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.bg-banner{
-  background-color: $cream;
-  color: grey;
-  font-size: 5vw;
+.form-banner{
+  color: $cream;
+  font-size: 35px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,11 +1,7 @@
-<div class="d-flex card-area-new bg-banner">
-  <h2 id="text-banner-area">Connect with your neighbours in <%=@area.name%></h2>
-</div>
-
 <div class="container">
 </div>
 
-<div class="d-flex card-area-new bg-yellow">
+<div class="d-flex card-area-new bg-coral">
   <h2 class="text-start">Name your event</h2>
   <%= simple_form_for [ @area, @activity ] do |f| %>
   <%= f.input :name, label: false %>
