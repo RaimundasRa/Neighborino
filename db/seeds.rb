@@ -718,7 +718,7 @@ areas = %w[Mill\ Meads
 
 
   ACTIVITY_TEMPLATES = [
-    {name: 'Football Club',
+    {name: '%area% Football Club',
     description: '%area% football club, every saturday at 9am. Come and join us for some friendly footy! this club runs on donations so please donate as and when you can to support our volunteers, we accept donations via paypal, cash, card and bank transfer. Please bring appropriate gear such as football boots and shin pads. If you dont have your own equipment you can borrow some of ours but we have limited items available and cant guarantee a fit for your size, so do get your own if you plan on coming more often! a team shirt will be provided - just send us a message with your size or let us know on the day!',
     tags: 'football foot ball soccer team sports health fitness teamwork competition running excercise sport club fun training',
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646670483/neighbourino%20(Neighborino)-production/Site/Activities/football_ysrlni.jpg'},
@@ -729,7 +729,7 @@ areas = %w[Mill\ Meads
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646668007/neighbourino%20(Neighborino)-production/Site/Activities/fiveaside_culsih.jpg'},
 
     {name: 'Cycling club',
-    description: 'This is a weekend cycling club good for everyone from beginner to pro, we are also family friendly! we typically have two to three groups depending on attendeed which are lead by our lead cyclists who are experienced and will guide the guide the groups through several routes throughout %area%. please listen to the lead cyclist at all times to maximise safety and enjoyment! we also have a few experiences cyclists who can do roadside repairs, punctures etc to make sure everyone keeps moving!',
+    description: 'This is a weekend cycling club around %area% good for everyone from beginner to pro, we are also family friendly! we typically have two to three groups depending on attendeed which are lead by our lead cyclists who are experienced and will guide the guide the groups through several routes throughout %area%. please listen to the lead cyclist at all times to maximise safety and enjoyment! we also have a few experiences cyclists who can do roadside repairs, punctures etc to make sure everyone keeps moving!',
     tags: 'bikes biking cycling road mountain track family friendly bicycle rides travel sports fitness health cardio excercise tours touring',
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646668007/neighbourino%20(Neighborino)-production/Site/Activities/cycling_ybkwsk.png'},
 
@@ -758,7 +758,7 @@ areas = %w[Mill\ Meads
     tags: 'gardening hedge trimming competition plants shrubbery skill power tools mowing art crafts competition competitive sport prize bush tree flower family fun social relaxed',
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646668006/neighbourino%20(Neighborino)-production/Site/Activities/hedgetrimming_b_yc8swg.jpg'},
 
-    {name: 'Archery club',
+    {name: '%area% Archery club',
     description: 'Welcome to our local archery club! we were one of the first to be established in %area% and we have a long and proud history! come and join our team whether its your first time or one-off booking or if you are experienced or a regular! professional coaches and fun for the whole family - word of caution, this is strenous on the arms so if you have any injuries or issues with movement please speak to our friendly staff who will work with you to get the most out of our sessions!',
     tags: 'archery arrows bows shooting sports hunting practice excercise fitness health fun family social target outdoors',
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646668004/neighbourino%20%28Neighborino%29-production/Site/Activities/archery_b_wti7vb.jpg'},
@@ -793,7 +793,7 @@ areas = %w[Mill\ Meads
     # tags: '',
     # image_url: ''},
 
-    {name: 'Litter Picking',
+    {name: 'Litter Picking in %area%',
     description: 'we love %area% so thats why we forms a group of local volunteers to help keep %area% tidy! all are welcome, it is suitable for all and is highly social. the benefits to our work is that we can encourage looking after our local area and making it safer and more enjoyable for all!',
     tags: 'litter pick community project rubbish clearing cleaning track garbage helpful volunteer tidy social friendly family helpful',
     image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741526/neighbourino%20%28Neighborino%29-production/Site/Activities/litterpick_pp9kj7.jpg'},
@@ -860,7 +860,7 @@ db_density = 1.0
 max_users_per_area = 10
 max_activities_per_user = 5
 
-puts ACTIVITY_TEMPLATES[0][:image_url]
+#puts ACTIVITY_TEMPLATES[0][:image_url]
 
 
 
@@ -869,8 +869,8 @@ def create_activity(area, organiser)
 
   template = ACTIVITY_TEMPLATES.sample
 
-  new_activity.name = template[:name].sub('%area%', area.name)
-  new_activity.description = template[:description].sub('%area%', area.name)
+  new_activity.name = template[:name].gsub('%area%', area.name)
+  new_activity.description = template[:description].gsub('%area%', area.name)
   new_activity.tags = template[:tags]
 
   if template[:image_url]
@@ -881,6 +881,11 @@ def create_activity(area, organiser)
   # new_photo = Cloudinary::Utils.api_sign_request()
 
   #new_activity.photo = 'image/jpg/v100/p25kb5d6ycba04nf7wpt46gqktz0.jpg' + Cloudinary::Utils.api_sign_request({public_id: 'p25kb5d6ycba04nf7wpt46gqktz0',version: '100'}, Cloudinary.config.api_secret)
+
+  new_activity.latitude = organiser.area.latitude
+  new_activity.longitude = organiser.area.longitude
+
+  new_activity.address = organiser.area.address
 
   puts "created new activity #{new_activity.name} for #{organiser.first_name}"
 

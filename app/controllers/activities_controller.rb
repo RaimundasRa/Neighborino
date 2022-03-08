@@ -5,16 +5,19 @@ class ActivitiesController < ApplicationController
   def index
     #category = params[:query]
     if params[:query].present?
-      @activities = Activity.search(params[:query]).shuffle
+      #@activities = Activity.search(params[:query])
+      @activities = Activity.includes(:user).where(user: {area: @area}).search(params[:query])
     else
-      @activities = Activity.first(12).shuffle
+      #@activities = Activity.first(12)
+      #@activities = Activity.where(user: {area: {id: @area.id}})
+      @activities = Activity.includes(:user).where(user: {area: @area}).limit(24)
       #@activities = Activity.search(params[:query])
       #activities = Activity.where("name ILIKE ?", "%#{category}%")
     end
     @markers = @activities.geocoded.map do |activity|
       {
-        lat: activity.latitude,
-        lng: activity.longitude
+        lat: activity.latitude + (rand - 0.5) * 0.02,
+        lng: activity.longitude + (rand - 0.5) * 0.04
       }
     end
   end
