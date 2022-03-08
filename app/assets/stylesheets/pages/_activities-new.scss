@@ -84,3 +84,17 @@
   background: -moz-linear-gradient(50deg, #f77678 60%, $coral 60%);
   background: linear-gradient(50deg, #f77678 60%, $coral 60%);
 }
+
+.card-area-back {
+  justify-content: space-between;
+  color: $cream;
+  height: 5em;
+  padding: 0.5em 1em;
+  // vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  // display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+// hello
