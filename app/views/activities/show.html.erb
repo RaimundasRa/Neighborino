@@ -65,7 +65,7 @@
 <%= simple_form_for(@booking, url: area_activity_bookings_path(@area, @activity)) do |f| %>
   <%= f.input :start, as: :hidden, value: @activity.starts_at %>
   <%= f.input :end, as: :hidden, value: @activity.ends_at %>
-  <%= f.button :submit, "Create booking", class: "btn btn-outline-primary my-3" %>
+  <%= f.button :submit, "Book this activity", class: "btn btn-outline-primary my-3" %>
 <% end %>
 </div>
 
