@@ -36,7 +36,7 @@
             <div class="card-product activity-cards">
               <img src="<%= activity_photo_url(activity) %>" />
               <div class="card-product-infos">
-                <h2><%= activity.name.capitalize %></h2>
+                <h2 id="activity-title"><%= activity.name.capitalize %></h2>
                  <p><%= activity_description_cap(activity, 85) %></p>
               </div>
               <div>
