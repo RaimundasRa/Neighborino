@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
     if params[:query].present?
       @activities = Activity.search(params[:query]).shuffle
     else
-      @activities = Activity.first[12].shuffle
+      @activities = Activity.first(12).shuffle
       #@activities = Activity.search(params[:query])
       #activities = Activity.where("name ILIKE ?", "%#{category}%")
     end
