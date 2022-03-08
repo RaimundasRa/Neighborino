@@ -1,6 +1,5 @@
 <div class="d-flex card-area-new bg-banner">
-  <h2 class="text-start">Become a host</h2>
-  <p>Connect with your neighbours in <%=@area.name%></p>
+  <h2 id="text-banner-area">Connect with your neighbours in <%=@area.name%></h2>
 </div>
 
 <div class="container">
@@ -21,7 +20,6 @@
   <h2 class="text-start">Choose a date</h2>
       <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Go", class: "go-button btn btn-primary" %>
 </div>
 
 <div class="d-flex card-area-new bg-yellow">
@@ -34,5 +32,13 @@
     <%= f.input :photo, multiple: true, as: :file, label: false %>
 </div>
 
-  <%= f.submit "Submit activity", class: "btn btn-primary" %>
+<div class="d-flex card-area-new bg-blue">
+  <h2 class="text-start">Add tags to your activity</h2>
+  <p>This will help neighborinos find your activity</p>
+  <%= f.input :tags, as: :check_boxes, collection: ['Sports','Gardening','Social','Crafts','Exchange','Info'], wrapper: :vertical_collection_inline %>
+</div>
+
+<div class="submit-button-container">
+  <%= f.submit "Submit activity", class: "submit-button-area btn btn-primary" %>
   <% end %>
+</div>

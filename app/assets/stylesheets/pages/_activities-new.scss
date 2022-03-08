@@ -1,3 +1,9 @@
+#text-banner-area{
+  font-size: 1.4em;
+  text-align: center;
+  color: $blue;
+}
+
 .card-area-new h2 {
   font-size: 50px;
   font-family: $headers-font;
@@ -16,16 +22,31 @@
   color: $cream;
   height: 20em;
   padding: 0.5em 1em;
-  display: table-cell;
   vertical-align: middle;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .bg-banner{
   background-color: $cream;
   color: grey;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
 }
-.go-button{
-  height: 50px;
+.submit-button-container{
+  width: 100%;
+  height: auto;
+}
+.submit-button-area{
+  width: 100%;
+  height: 100%;
+  color: $cream;
+  font-family: $logo-font;
+  font-size: 3vh;
 }
 
 .card .subtle {
