@@ -803,6 +803,10 @@ db_density = 1.0
 max_users_per_area = 10
 max_activities_per_user = 5
 
+puts ACTIVITY_TEMPLATES[0][:image_url]
+
+
+
 def create_activity(area, organiser)
   new_activity = Activity.new(user: organiser)
 
@@ -811,8 +815,9 @@ def create_activity(area, organiser)
   new_activity.name = template[:name].sub('%area%', area.name)
   new_activity.description = template[:description].sub('%area%', area.name)
 
-  unless template['image_url']
-    new_activity.aux_image_url = template['image_url']
+  if template[:image_url]
+    new_activity.aux_image_url = template[:image_url]
+    #puts "set seed image to #{new_activity.aux_image_url} from template #{template[:image_url]}";
   end
   #signature = Cloudinary::Utils.api_sign_request({public_id: 'p25kb5d6ycba04nf7wpt46gqktz0', version: 100}, Cloudinary.config.api_secret)
   # new_photo = Cloudinary::Utils.api_sign_request()
