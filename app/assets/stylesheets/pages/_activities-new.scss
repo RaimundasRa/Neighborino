@@ -12,12 +12,20 @@
 }
 
 .card-area-new {
+  justify-content: space-between;
   color: $cream;
-  height: 4em;
+  height: 20em;
   padding: 0.5em 1em;
   display: table-cell;
   vertical-align: middle;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.bg-banner{
+  background-color: $cream;
+  color: grey;
+}
+.go-button{
+  height: 50px;
 }
 
 .card .subtle {
@@ -32,4 +40,25 @@
   background: -o-linear-gradient(110deg, $blue 60%, #99c1cf 60%);
   background: -moz-linear-gradient(110deg, $blue 60%, #99c1cf 60%);
   background: linear-gradient(110deg, $blue 60%, #99c1cf 60%);
+}
+
+.bg-green {
+  background: -webkit-linear-gradient(20deg, $green 80%, #abcc98 60%);
+  background: -o-linear-gradient(20deg, $green 80%, #abcc98 60%);
+  background: -moz-linear-gradient(20deg, $green 80%, #abcc98 60%);
+  background: linear-gradient(20deg, $green 80%, #abcc98 60%);
+}
+
+.bg-yellow {
+  background: -webkit-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  background: -o-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  background: -moz-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  background: linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+}
+
+.bg-coral {
+  background: -webkit-linear-gradient(50deg, #f77678 60%, $coral 60%);
+  background: -o-linear-gradient(50deg, #f77678 60%, $coral 60%);
+  background: -moz-linear-gradient(50deg, #f77678 60%, $coral 60%);
+  background: linear-gradient(50deg, #f77678 60%, $coral 60%);
 }
