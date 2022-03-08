@@ -2,12 +2,12 @@
   <div class="activities-index-left">
     <div class="left-container d-flex flex-column align-items-center">
 
-
     <div class="w-100 d-flex flex-column align-items-start">
       <%= link_to "Back to area", area_path(@area), class: "btn btn-outline-primary my-3" %>
-      <h1>List of activities in this category</h1>
     </div>
-
+    <div class="headerino bg-blue">
+      <h2>Activities in <%= @area.name %></h2>
+    </div>
 
       <ul class="list-inline tabs-underlined">
         <li class="tab-underlined">
