@@ -46,3 +46,15 @@
 .options-container{
   color: grey;
 }
+
+#host-button{
+  background-color: #ff3e4173;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#host-button a{
+  color: $cream;
+}
