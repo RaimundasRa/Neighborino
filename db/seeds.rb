@@ -857,7 +857,7 @@ areas = %w[Mill\ Meads
 # Flat.near([40.71, 100.23], 20)
 
 db_density = 1.0
-max_users_per_area = 10
+max_users_per_area = 15
 max_activities_per_user = 5
 
 #puts ACTIVITY_TEMPLATES[0][:image_url]

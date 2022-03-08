@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  # def colony_owner_name(colony)
+  #   colony.user.email.match(/^(?<username>.+)@/)[:username].capitalize!
+  # end
+
   def activity_description_cap(activity, maxlen)
     "#{activity.description[0...maxlen]}..."
   end

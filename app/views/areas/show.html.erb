@@ -1,10 +1,13 @@
 <div class="area-title">
-<h1>Things to do in <%= @area.name %></h1>
+  <h1>Things to do in <%= @area.name %></h1>
 </div>
-<div class="container">
 
-<h3 id="area-title-card" class="title-text-card-container">Categories</h3>
-<br>
+
+<div class="headerino bg-green">
+  <h2 class="headerino-lm">Categories</h2>
+</div>
+
+<div class="container">
 
   <div class="cards">
   <%= link_to "#{area_activities_path(@area)}?query=sports" do %>
@@ -45,7 +48,13 @@
 
   </div>
 
-  <h3>Recently added activities</h3>
+</div>
+
+<div class="headerino bg-blue">
+  <h2 class="headerino-lm">Recently added activities</h2>
+</div>
+
+<div class="container">
 
   <div class="cards-activity">
     <% @activities.each_with_index do |activity, index| %>
