@@ -29,6 +29,7 @@ class BookingsController < ApplicationController
   end
 
   def show_my_bookings
+    @area = current_user.area
     @bookings = Booking.where(user: current_user)
   end
 
