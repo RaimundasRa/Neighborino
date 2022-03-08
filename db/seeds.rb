@@ -811,7 +811,7 @@ def create_activity(area, organiser)
   new_activity.name = template[:name].sub('%area%', area.name)
   new_activity.description = template[:description].sub('%area%', area.name)
 
-  new_activity.aux_image_url = template['image_url'] unless template['imag_rl'].nil?
+  new_activity.aux_image_url = template['image_url'] unless template['image_url'].nil?
   #signature = Cloudinary::Utils.api_sign_request({public_id: 'p25kb5d6ycba04nf7wpt46gqktz0', version: 100}, Cloudinary.config.api_secret)
   # new_photo = Cloudinary::Utils.api_sign_request()
 
