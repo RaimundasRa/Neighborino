@@ -1,50 +1,59 @@
-<%# <div class="container"> %>
-  <div class="row no-margin">
-    <div class="column col-6">
-  <h1>List of activities in this category</h1>
-  <br>
+<div class="index-container">
+  <div class="activities-index-left">
+    <div class="left-container d-flex flex-column align-items-center">
 
-  <ul class="list-inline tabs-underlined">
-  <li class="tab-underlined">
-    <%= link_to "Sports", "#{area_activities_path(@area)}?category=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
-  </li>
-  <li class="tab-underlined">
-    <%= link_to "Gardening", "#{area_activities_path(@area)}?category=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
-  </li>
-  <li class="tab-underlined">
-    <%= link_to "Social", "#{area_activities_path(@area)}?category=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
-  </li>
-  <li class="tab-underlined">
-    <%= link_to "Crafts", "#{area_activities_path(@area)}?category=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
-  </li>
-  <li class="tab-underlined">
-    <%= link_to "Exchange", "#{area_activities_path(@area)}?category=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
-  </li>
-  <li class="tab-underlined">
-    <%= link_to "Info", "#{area_activities_path(@area)}?category=info", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
-  </li>
-  </ul>
-  <br>
+    <div class="w-100 d-flex flex-column align-items-start">
+      <%= link_to "Back to area", area_path(@area), class: "btn btn-outline-primary my-3" %>
+      <h1>List of activities in this category</h1>
+    </div>
 
-  <% @activities.each_with_index do |activity, index| %>
-    <%= link_to area_activity_path(@area, activity) do %>
-    <div class="card-product activity-cards">
-      <img src="<%= activies_photo_url(activity) %>" />
-      <div class="card-product-infos">
-        <h2><%= activity.name.capitalize %></h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+
+      <ul class="list-inline tabs-underlined">
+        <li class="tab-underlined">
+          <%= link_to "Sports", "#{area_activities_path(@area)}?category=sports", class: (params[:category]&.include?("sports") ? "active" : "inactive") %>
+        </li>
+        <li class="tab-underlined">
+          <%= link_to "Gardening", "#{area_activities_path(@area)}?category=gardening", class: (params[:category]&.include?("gardening") ? "active" : "inactive") %>
+        </li>
+        <li class="tab-underlined">
+          <%= link_to "Social", "#{area_activities_path(@area)}?category=social", class: (params[:category]&.include?("social") ? "active" : "inactive") %>
+        </li>
+        <li class="tab-underlined">
+          <%= link_to "Crafts", "#{area_activities_path(@area)}?category=crafts", class: (params[:category]&.include?("crafts") ? "active" : "inactive") %>
+        </li>
+        <li class="tab-underlined">
+          <%= link_to "Exchange", "#{area_activities_path(@area)}?category=exchange", class: (params[:category]&.include?("exchange") ? "active" : "inactive") %>
+        </li>
+        <li class="tab-underlined">
+          <%= link_to "Info", "#{area_activities_path(@area)}?category=info", class: (params[:category]&.include?("info") ? "active" : "inactive") %>
+        </li>
+      </ul>
+
+      <div class="w-100">
+        <% @activities.each_with_index do |activity, index| %>
+          <%= link_to area_activity_path(@area, activity) do %>
+            <div class="card-product activity-cards">
+              <img src="<%= activity_photo_url(activity) %>" />
+              <div class="card-product-infos">
+                <h2><%= activity.name.capitalize %></h2>
+                <p>Product description with <strong>relevant info</strong> only.</p>
+              </div>
+              <div>
+              <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar-bordered-index" %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
-      <div>
-     <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar-bordered-index" %>
     </div>
-    </div>
-    <% end %>
-    <% end %>
   </div>
 
-  <div class="column col-6 map-box-vertical">
-      <img id="sticky-map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/1.346,48.8595,11.72,0,0/1200x400?access_token=pk.eyJ1Ijoic2FqaWZpbyIsImEiOiJjbDA5amVzcDMwMGw3M2JwdDI0M3ZwbXVmIn0.87lNDe_z7JyUZ-9LyvJn1w'></div>
+  <div class="map-box-vertical">
+    <div id="sticky-map"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+      <%# <img  src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/1.346,48.8595,11.72,0,0/1200x400?access_token=pk.eyJ1Ijoic2FqaWZpbyIsImEiOiJjbDA5amVzcDMwMGw3M2JwdDI0M3ZwbXVmIn0.87lNDe_z7JyUZ-9LyvJn1w'></div> %>
   </div>
-
-    <%= link_to "Back to area", area_path(@area) %>
-<%# </div> %>
+</div>
