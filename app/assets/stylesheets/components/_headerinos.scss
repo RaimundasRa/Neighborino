@@ -27,11 +27,13 @@
 }*/
 
 .headerino {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
   width: 100%;
   display: block;
   padding: 0.5rem 1rem;
   margin: 0 0 1em 0;
   line-height: 1.5em;
   font-family: $body-font !important;
+
   // font-weight: bolder;
 }
