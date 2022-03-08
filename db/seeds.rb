@@ -679,27 +679,26 @@ activities = %w[rock\ climbing
   skiing
   skate\ park
   bmx\ ramp
-  downhill\ mountain\ biking
+
   gym\ weights\ session
   gym\ cardio\ session
   gardening\ exhibition
-  tennis
+
   community\ project
-  garbage\ collection
+
   sculpting
-  motor\ show
-  classic\ car\ show
+
+
   yoga\ class
-  football\ club
+
   karate\ club
-  art\ club
-  cycling\ club
-  tennis\ club
+
+
   running\ club
   welding\ workshop
 
   art\ workshop
-  chess\ club
+
   gaming\ club]
 
 areas = %w[Stratford St\ Mary\ Cray Croydon]
@@ -772,47 +771,47 @@ areas = %w[Mill\ Meads
     {name: 'Car Boot Sale',
     description: 'Bag a bargain at the biggest car boot sale in %area%! chock fulla bargains and lovely people, come spend an hour or a whole day! you never know what you might find! please send me a message if you wish to reserve a place for your car boot stall as places fill fast!',
     tags: 'car boot sale market selling buying trading exchange gift item present bargain antique items barn finds treasure',
-    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646668005/neighbourino%20%28Neighborino%29-production/Site/Activities/carbootsale_ghema4.jpg'}
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646668005/neighbourino%20%28Neighborino%29-production/Site/Activities/carbootsale_ghema4.jpg'},
 
-    # {name: '',
+    {name: 'Art Club',
+    description: 'come join our friendly art club for all ages, learn how to draw, paint, craft, sculp and more! run by donations.',
+    tags: 'community art paint painting crafts crafting making tinkering sculpting social fun family group indoors outdoors team teamwork colour visual relaxing creative artistic skills',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646741526/neighbourino%20(Neighborino)-production/Site/Activities/artclub_oky6zd.jpg'},
+
+    {name: 'Community Chess Club',
+    description: 'come join the chess masters at %area% chess club, learn new skills or just come for the social aspects! we welcome all from beginners to semi professionals, and we also have other games too!',
+    tags: 'chess club local social games board game gaming competition competitive sport fun family challenging',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741526/neighbourino%20%28Neighborino%29-production/Site/Activities/chessclub_j3gryh.jpg'},
+
+    # {name: 'Running Club',
     # description: '',
     # tags: '',
     # image_url: ''},
 
-    # {name: '',
+    # {name: 'Tennis Club',
     # description: '',
     # tags: '',
     # image_url: ''},
 
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
+    {name: 'Litter Picking',
+    description: 'we love %area% so thats why we forms a group of local volunteers to help keep %area% tidy! all are welcome, it is suitable for all and is highly social. the benefits to our work is that we can encourage looking after our local area and making it safer and more enjoyable for all!',
+    tags: 'litter pick community project rubbish clearing cleaning track garbage helpful volunteer tidy social friendly family helpful',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741526/neighbourino%20%28Neighborino%29-production/Site/Activities/litterpick_pp9kj7.jpg'},
 
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
+    {name: 'Community Project - Planting',
+    description: 'we are on a mission to make %area% look amazing, we have a large group of helpers and we go around and ensure the local plants, flowers, and shrubbery are in good condition and we plant trees too! this will have massive benefits to the %area% community and we encourage all to participate! fun for the whole family and positive vibes, learn gardening skills too!',
+    tags: 'community project gardening planting helpful volunteer flowers trees local improvement',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741679/neighbourino%20%28Neighborino%29-production/Site/Activities/plantingjpg_tltzdy.jpg'},
 
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
+    {name: 'Community Project - Playground',
+    description: '%area% needs your help! the local playground is run down and in a sorry state, and we need safe spaces for our kids to enjoy. come and hvolunteer for the rebuild and refurbishment of our local playground! donate money or tools and equipment!',
+    tags: 'community project playground school kids social fun family parents outdoors labour contribute creativity creative art artistic helpful volunteer',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741526/neighbourino%20(Neighborino)-production/Site/Activities/communityplayground_ole6pj.jpg'},
 
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
-
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
-
-    # {name: '',
-    # description: '',
-    # tags: '',
-    # image_url: ''},
+    {name: 'Community Project - Painting',
+    description: '%area% would love for you to volunteer in this excellent community project, we as a group are going around and painting murals and refurbishing the lesser maintained buildings in our area, and supporting those with disabilities or financial troubles who cant do it themselves, the overall impact to the community will be positive and you can help make %area% a better place for all!',
+    tags: 'community project painting helping volunteering fun social family local people donate artistic art creativity skills',
+    image_url: 'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646741526/neighbourino%20%28Neighborino%29-production/Site/Activities/communitypainting_boliop.jpg'}
 
     # {name: '',
     # description: '',
