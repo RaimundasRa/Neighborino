@@ -47,7 +47,8 @@ class ActivitiesController < ApplicationController
     @activity.user = current_user
     # @activity.area = @activity
     if @activity.save
-      redirect_to area_activities_path
+      redirect_to area_activity_path(@area, @activity)
+      #redirect_to area_activities_path
     else
       render :new
     end
