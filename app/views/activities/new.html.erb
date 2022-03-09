@@ -33,7 +33,7 @@
 <div class="d-flex card-area-new bg-blue right-side">
   <h2 class="text-start">Add tags to your activity</h2>
   <p>This will help neighborinos find your activity</p>
-  <%= f.input :tags, as: :check_boxes, collection: ['Sports','Gardening','Social','Crafts','Exchange','Info'], wrapper: :vertical_collection_inline %>
+  <%= f.input :tags, as: :string, collection: ['Sports','Gardening','Social','Crafts','Exchange','Info'], wrapper: :vertical_collection_inline %>
 </div>
 
 <div class="submit-button-container">
