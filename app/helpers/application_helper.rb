@@ -14,6 +14,8 @@ module ApplicationHelper
   # end
 
   def activity_description_cap(activity, maxlen)
+    return if activity.nil? or activity.description.nil?
+
     "#{activity.description[0...maxlen]}..."
   end
 
