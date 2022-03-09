@@ -64,6 +64,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :address, :photo)
+    params.require(:activity).permit(:na, :tagsme, :address, :photo, :description, :starts_at, :ends_at)
   end
 end
