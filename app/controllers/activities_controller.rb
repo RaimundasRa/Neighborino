@@ -16,8 +16,8 @@ class ActivitiesController < ApplicationController
     end
     @markers = @activities.geocoded.map do |activity|
       {
-        lat: activity.latitude + (rand - 0.5) * 0.02,
-        lng: activity.longitude + (rand - 0.5) * 0.04
+        lat: activity.latitude + ((rand - 0.5) * 0.02),
+        lng: activity.longitude + ((rand - 0.5) * 0.04)
       }
     end
   end
