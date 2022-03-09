@@ -4,28 +4,30 @@
 <div class="d-flex card-area-new bg-coral">
   <h2 class="text-start">Name your event</h2>
   <%= simple_form_for [ @area, @activity ] do |f| %>
-  <%= f.input :name, label: false %>
+  <%= f.input :name, label: false, input_html: {class: "n-text-input"}  %>
 </div>
 
 <div class="d-flex card-area-new bg-blue right-side">
   <h2 class="text-start">Where is your event taking place?</h2>
-<%= f.input :address, label: false  %>
+<%= f.input :address, label: false, input_html: {class: "n-text-input"}  %>
 </div>
 
 <div class="d-flex card-area-new bg-green">
   <h2 class="text-start">Choose a date</h2>
-      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <div class="d-flex">
+      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker n-text-input"} %>
+      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker n-text-input"} %>
+  </div>
 </div>
 
 <div class="d-flex card-area-new bg-yellow right-side">
   <h2 class="text-start">Description</h2>
-  <%= f.input :description, label: false  %>
+  <%= f.input :description, label: false, input_html: {class: "activity-description-input n-text-input"}  %>
 </div>
 
 <div class="d-flex card-area-new bg-coral">
   <h2 class="text-start">Upload descriptive pictures</h2>
-    <%= f.input :photo, multiple: true, as: :file, label: false %>
+    <%= f.input :photo, multiple: true, as: :file, label: false, input_html: {class: "n-text-input"} %>
 </div>
 
 <div class="d-flex card-area-new bg-blue right-side">
