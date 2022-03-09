@@ -8,7 +8,7 @@
   font-family: $headers-font;
   letter-spacing: -2px;
   font-size: 3em;
-  height: 200px;
+  //height: 200px;
 }
 
 .card-area-new p {
@@ -19,13 +19,14 @@
 .card-area-new {
   justify-content: space-between;
   color: $cream;
-  height: 20em;
+  //height: 20em;
   padding: 0.5em 1em;
   vertical-align: middle;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  //box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .form-banner{
   color: $cream;
@@ -45,10 +46,6 @@
   color: $cream;
   font-family: $logo-font;
   font-size: 3vh;
-}
-.right-side{
-  text-align: end;
-  align-items: flex-end;
 }
 .card .subtle {
   color: #000;
@@ -97,4 +94,19 @@
   align-items: flex-start;
 }
 
+.activity_starts_at {
+  margin: 0 20px 0 0;
+}
+
+.activity-description-input {
+  width: 30em;
+  height: 10em;
+}
+
+.n-text-input {
+
+  font-size: 1.25em;
+  text-align: center;
+  border-radius: 10px;
+}
 // hello
