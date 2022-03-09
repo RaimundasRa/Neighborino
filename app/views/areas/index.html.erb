@@ -9,7 +9,7 @@
 
 
 <div class="content">
-  <div class="area-card-container mt-5 container">
+  <div class="area-card-container mt-4 container">
     <% @areas.each do |area| %>
      <%= link_to area_path(area) do %>
       <div class="card-area">
@@ -17,7 +17,9 @@
       <div class="card-area-infos">
         <div>
           <h2><%= area.name %></h2>
+          <!--
           <p><%= area.address %></p>
+          -->
         </div>
       </div>
     </div>
