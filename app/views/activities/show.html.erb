@@ -1,5 +1,5 @@
 <div class="headerino bg-blue">
-  <h2 class="headerino-lm"><%= @activity.name.capitalize %></h2>
+  <h2 class="headerino-lm" style="font-weight: bolder;"><%= @activity.name.capitalize %></h2>
   <p><%= "#{@activity.address} - organised by" %> <strong><%= "#{@activity.user.first_name} #{@activity.user.last_name}" %></strong></p>
 </div>
 
@@ -37,7 +37,7 @@
 
 
 <div class="headerino bg-green">
-  <h3 class="headerino-lm">Details</h3>
+  <h3 class="headerino-lm" style="font-weight: bolder;">Details</h3>
 </div>
 
 <div><p style="margin: 0 auto"><%= @activity.description %></p></div>
