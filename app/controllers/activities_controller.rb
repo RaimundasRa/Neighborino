@@ -43,9 +43,13 @@ class ActivitiesController < ApplicationController
   end
 
   def create
+    # if params[:tags].present?
+    #   params[:tags] = params[:tags].join(', ')
+    # end
     @activity = Activity.new(activity_params)
     @activity.user = current_user
     # @activity.area = @activity
+    puts "PARAMS IS = #{params}"
     if @activity.save
       redirect_to area_activities_path
     else
@@ -64,6 +68,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:name, :address, :photo)
+    params.require(:activity).permit(:name, :tags, :address, :photo, :description, :starts_at, :ends_at)
   end
 end
