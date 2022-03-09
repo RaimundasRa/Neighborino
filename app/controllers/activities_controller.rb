@@ -65,9 +65,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    if params[:tags].present?
-      params[:tags] = params[:tags].join(', ')
-    end
-    params.require(:activity).permit(:name, :address, :photo, :description, :tags)
+    params.require(:activity).permit(:name, :address, :photo, :description)
   end
 end
