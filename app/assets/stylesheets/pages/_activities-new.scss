@@ -4,7 +4,8 @@
 }
 
 .card-area-new h2 {
-  font-size: 40px;
+  font-size: 30px !important;
+  // font-weight: 100px !important;
   font-family: $headers-font;
   letter-spacing: -2px;
   font-size: 3em;
@@ -12,7 +13,7 @@
 }
 
 .card-area-new p {
-  font-size: 20px;
+  font-size: 15px !important;
   font-family: $body-font;
 }
 
@@ -101,7 +102,7 @@
 
 .activity-description-input {
   width: 30em;
-  height: 10em;
+  height: 3em;
 }
 
 .n-text-input {

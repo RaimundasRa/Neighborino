@@ -8,7 +8,7 @@
 </div>
 
 <div class="d-flex card-area-new bg-blue right-side">
-  <h2 class="text-start">Where is your event taking place?</h2>
+  <h2 class="text-start">Where is it taking place?</h2>
 <%= f.input :address, label: false, input_html: {class: "n-text-input"}  %>
 </div>
 
@@ -22,16 +22,16 @@
 
 <div class="d-flex card-area-new bg-yellow right-side">
   <h2 class="text-start">Description</h2>
-  <%= f.input :description, label: false, input_html: {class: "activity-description-input n-text-input"}  %>
+  <%= f.input :description, label: false, input_html: {class: "activity-description-input n-text-input", :size=>"10"} %>
 </div>
 
 <div class="d-flex card-area-new bg-coral">
-  <h2 class="text-start">Upload descriptive pictures</h2>
+  <h2 class="text-start">Upload pictures</h2>
     <%= f.input :photo, multiple: true, as: :file, label: false, input_html: {class: "n-text-input"} %>
 </div>
 
 <div class="d-flex card-area-new bg-blue right-side">
-  <h2 class="text-start">Add tags to your activity</h2>
+  <h2 class="text-start">Add tags</h2>
   <p>This will help neighborinos find your activity</p>
   <%= f.input :tags, as: :check_boxes, legend_tag: false, input_html: { class: "tag-selector" },item_wrapper_class: 'tag-item', collection: ['Sports','Gardening','Social','Crafts','Exchange','Info'], wrapper: :vertical_collection_inline %>
 </div>

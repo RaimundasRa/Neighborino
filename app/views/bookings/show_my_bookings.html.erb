@@ -20,14 +20,14 @@
 
       <div class="card-product-infos">
         <h2><%= link_to booking.activity.name, area_activity_path(booking.user.area, booking.activity)%></h2>
-        <p><strong>Starts at:</strong> <%= booking.activity.starts_at.nil? ? 'No date specified' : booking.activity.starts_at.strftime('%a, %d %b %Y %H:%M') %><br>
-        <strong>Ends at: </strong> <%= booking.activity.ends_at.nil? ? 'No date specified' : booking.activity.ends_at.strftime('%a, %d %b %Y %H:%M') %><br>
+        <p><strong>Starts at:</strong> <%= booking.activity.starts_at.nil? ? 'Every Saturday 12:00 AM' : booking.activity.starts_at.strftime('%a, %d %b %Y %H:%M') %><br>
+        <strong>Ends at: </strong> <%= booking.activity.ends_at.nil? ? 'Every Saturday 2:00 PM' : booking.activity.ends_at.strftime('%a, %d %b %Y %H:%M') %><br>
       </div>
 
-      <div style="float: right; margin-left: 50px;">
-        <%= link_to "View", area_activity_path(booking.user.area, booking.activity), class: 'btn btn-dark' %>
+      <div style="float: left; margin-left: 50px;">
+        <%= link_to "View", area_activity_path(booking.user.area, booking.activity), class: 'btn btn-outline-warning' %>
 
-        <%= link_to "Cancel", area_activity_booking_path(area_id: booking.user.area, activity_id: booking.activity.id, id: booking.id), class: 'btn btn-dark', remote: true, method: :delete, data: {confirm: "Are you sure you want to cancel?"} %>
+        <%= link_to "Cancel", area_activity_booking_path(area_id: booking.user.area, activity_id: booking.activity.id, id: booking.id), class: 'btn btn-outline-dark', remote: true, method: :delete, data: {confirm: "Are you sure you want to cancel?"} %>
       </div>
     </div>
 <% end %>
