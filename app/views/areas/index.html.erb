@@ -13,7 +13,7 @@
     <% @areas.each do |area| %>
      <%= link_to area_path(area) do %>
       <div class="card-area">
-      <img src="<%= area_image_url() %>" />
+      <img src="<%= area_image_url(area) %>" />
       <div class="card-area-infos">
         <div>
           <h2><%= area.name %></h2>
