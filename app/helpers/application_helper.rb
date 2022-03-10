@@ -23,44 +23,51 @@ module ApplicationHelper
     Area.all
   end
 
-  def area_image_url
-    images = ['https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403248/neighbourino%20%28Neighborino%29-production/Area000.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403246/neighbourino%20%28Neighborino%29-production/Area003.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403245/neighbourino%20%28Neighborino%29-production/Area005.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403245/neighbourino%20%28Neighborino%29-production/Area006.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403244/neighbourino%20%28Neighborino%29-production/Area007.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403244/neighbourino%20%28Neighborino%29-production/Area008.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403243/neighbourino%20%28Neighborino%29-production/Area010.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403244/neighbourino%20%28Neighborino%29-production/Area011.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403241/neighbourino%20%28Neighborino%29-production/Area012.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403241/neighbourino%20%28Neighborino%29-production/Area013.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403241/neighbourino%20%28Neighborino%29-production/Area014.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403241/neighbourino%20%28Neighborino%29-production/Area015.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403240/neighbourino%20%28Neighborino%29-production/Area020.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403238/neighbourino%20%28Neighborino%29-production/Area021.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403238/neighbourino%20%28Neighborino%29-production/Area023.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403237/neighbourino%20%28Neighborino%29-production/Area025.jpg',
-              'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646403237/neighbourino%20%28Neighborino%29-production/Area026.jpg']
-
-    images.sample
+  def area_image_url(area)
+    case area.name.downcase
+    when 'south croydon'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906562/neighbourino%20(Neighborino)-production/Site/areas/southcroydon_lrjf8f.jpg'
+    when 'plaistow'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906562/neighbourino%20(Neighborino)-production/Site/areas/plaistow_ioxmsw.jpg'
+    when 'orpington'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906563/neighbourino%20(Neighborino)-production/Site/areas/orpington_kefpxl.jpg'
+    when 'stratform marsh'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906563/neighbourino%20(Neighborino)-production/Site/areas/stratford_nf2shj.jpg'
+    when 'temple mills'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906564/neighbourino%20(Neighborino)-production/Site/areas/templemills_j5jrwt.jpg'
+    when 'addiscombe'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906564/neighbourino%20(Neighborino)-production/Site/areas/addiscombe_s84usx.jpg'
+    when 'wandle park'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906565/neighbourino%20(Neighborino)-production/Site/areas/wandle_o2sndi.jpg'
+    when 'croydon'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906565/neighbourino%20(Neighborino)-production/Site/areas/croydon_esqjt3.jpg'
+    when 'poverest'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906686/neighbourino%20(Neighborino)-production/Site/areas/poverest_petg73.jpg'
+    when 'derry downs'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906686/neighbourino%20(Neighborino)-production/Site/areas/derrydowns_p7vjzw.webp'
+    when 'mill meads'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906763/neighbourino%20(Neighborino)-production/Site/areas/millmeads_qsiwml.jpg'
+    else
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646906562/neighbourino%20(Neighborino)-production/Site/areas/plaistow_ioxmsw.jpg'
+    end
   end
 
   def category_image(category)
     case category.downcase
     when 'gardening'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405692/neighbourino%20%28Neighborino%29-production/CAT_Gardening.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405692/neighbourino%20(Neighborino)-production/CAT_Gardening.jpg'
     when 'sports'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405687/neighbourino%20%28Neighborino%29-production/CAT_Sports.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405687/neighbourino%20(Neighborino)-production/CAT_Sports.jpg'
     when 'info'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405684/neighbourino%20%28Neighborino%29-production/CAT_Info.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405684/neighbourino%20(Neighborino)-production/CAT_Info.jpg'
     when 'social'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405684/neighbourino%20%28Neighborino%29-production/CAT_Social.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405684/neighbourino%20(Neighborino)-production/CAT_Social.jpg'
     when 'crafts'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405683/neighbourino%20%28Neighborino%29-production/CAT_Crafts.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405683/neighbourino%20(Neighborino)-production/CAT_Crafts.jpg'
     when 'exchange'
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405683/neighbourino%20%28Neighborino%29-production/CAT_Exchange.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646405683/neighbourino%20(Neighborino)-production/CAT_Exchange.jpg'
     else
-      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1646405682/neighbourino%20%28Neighborino%29-production/istockphoto-625686994-612x612_szh0fh.jpg'
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/c_scale,w_500/v1646837483/neighbourino%20(Neighborino)-production/260cj5qxlol7v61n3uac8c3qh3pu.jpg'
     end
   end
 end
