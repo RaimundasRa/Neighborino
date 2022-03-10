@@ -13,6 +13,16 @@ module ApplicationHelper
   #   colony.user.email.match(/^(?<username>.+)@/)[:username].capitalize!
   # end
 
+  def user_initial(user)
+    return '' if user.first_name.nil?
+
+    "#{user.first_name.first}#{user.last_name.first}".upcase
+  end
+
+  def user_photo(user)
+    ''
+  end
+
   def activity_description_cap(activity, maxlen)
     return if activity.nil? or activity.description.nil?
 
