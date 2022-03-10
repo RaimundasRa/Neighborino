@@ -2,9 +2,10 @@ import flatpickr from "flatpickr";
 
 const initFlatpickr = () => {
   flatpickr(".datepicker", {
-    altInput: true,
     enableTime: true,
-    dateFormat: "Y-m-d H:i",
+    dateFormat: "d M Y H:i",
+    allowInput: true,
+    defaultDate: new Date(),
   }
   );
 }
