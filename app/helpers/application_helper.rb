@@ -14,7 +14,7 @@ module ApplicationHelper
   # end
 
   def user_initial(user)
-    return '' if user.first_name.nil?
+    return '?' if user.first_name.nil?
 
     "#{user.first_name.first}#{user.last_name.first}".upcase
   end

@@ -1,0 +1,64 @@
+.breadcrumbs {
+  background-color: $yellow-muted;
+}
+
+.breadcrumbs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2em;
+  // background-color: $yellow;
+}
+
+.breadcrumbs li:first-child {
+  padding-left: 2.2em;
+}
+.breadcrumbs li:last-child {
+  padding-right: 1em;
+}
+
+.breadcrumbs a {
+  transition: 0.1s;
+  line-height: inherit;
+}
+
+.breadcrumbs a:hover {
+  background-color: $yellow;
+}
+
+/*
+.breadcrumbs li:nth-child(4n+0) {
+  background-color: $coral;
+}
+.breadcrumbs li:nth-child(4n+1) {
+  background-color: $green;
+}
+.breadcrumbs li:nth-child(4n+2) {
+  background-color: $blue;
+}
+.breadcrumbs li:nth-child(4n+3) {
+  background-color: $yellow;
+}
+*/
+
+.breadcrumbs li:not(:last-child):after {
+  display: inherit;
+  content: '>';
+  margin: 0 1em;
+  line-height: inherit;
+}
+
+.breadcrumbs a {
+
+}
