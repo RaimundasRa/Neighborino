@@ -28,7 +28,7 @@ class ActivitiesController < ApplicationController
     @booking = Booking.new
     @breadcrumbs = [{text: @area.name, url: area_path(@area)},
                     {text: 'Activities', url: area_activities_path(@area)},
-                    {text: "Activity - #{@activity.name}", url: area_activity_path(@area, @activity)}]
+                    {text: @activity.name, url: area_activity_path(@area, @activity)}]
   end
 
   def edit
@@ -47,6 +47,7 @@ class ActivitiesController < ApplicationController
     @activity.address = @area.address
 
     @breadcrumbs = [{text: @area.name, url: area_path(@area)},
+      {text: 'Activities', url: area_activities_path(@area)},
       {text: 'Host an activity', url: new_area_activity_path(@area, @activity)}]
   end
 
