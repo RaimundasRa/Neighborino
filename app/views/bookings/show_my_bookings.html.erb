@@ -20,8 +20,8 @@
 
       <div class="card-product-infos">
         <h2><%= link_to booking.activity.name, area_activity_path(booking.user.area, booking.activity)%></h2>
-        <p><strong>Check-in:</strong> <%= booking.start.nil? ? 'no date specified' : booking.start.strftime('%Y-%m-%d') %><br>
-        <strong>Check-out: </strong> <%= booking.end.nil? ? 'no date specified' : booking.end.strftime('%Y-%m-%d') %><br>
+        <p><strong>Starts at:</strong> <%= booking.activity.starts_at.nil? ? 'no date specified' : booking.activity.starts_at.strftime('%a, %d %b %Y %H:%M') %><br>
+        <strong>Ends at: </strong> <%= booking.activity.ends_at.nil? ? 'no date specified' : booking.activity.ends_at.strftime('%a, %d %b %Y %H:%M') %><br>
       </div>
 
       <div style="float: right; margin-left: 50px;">
