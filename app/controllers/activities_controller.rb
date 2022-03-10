@@ -20,10 +20,15 @@ class ActivitiesController < ApplicationController
         lng: activity.longitude + ((rand - 0.5) * 0.04)
       }
     end
+    @breadcrumbs = [{text: @area.name, url: area_path(@area)},
+                    {text: 'Activities', url: area_activities_path(@area)}]
   end
 
   def show
     @booking = Booking.new
+    @breadcrumbs = [{text: @area.name, url: area_path(@area)},
+                    {text: 'Activities', url: area_activities_path(@area)},
+                    {text: "Activity - #{@activity.name}", url: area_activity_path(@area, @activity)}]
   end
 
   def edit
@@ -40,6 +45,9 @@ class ActivitiesController < ApplicationController
   def new
     @activity = Activity.new
     @activity.address = @area.address
+
+    @breadcrumbs = [{text: @area.name, url: area_path(@area)},
+      {text: 'Host an activity', url: new_area_activity_path(@area, @activity)}]
   end
 
   def create

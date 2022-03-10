@@ -1,0 +1,57 @@
+.breadcrumbs {
+  background-color: $yellow-muted;
+}
+
+.breadcrumbs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 4px 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  line-height: 2em;
+  color: $gray;
+  // background-color: $yellow;
+}
+
+.breadcrumbs li:first-child {
+  padding-left: 2.2em;
+}
+.breadcrumbs li:last-child {
+  padding-right: 1em;
+}
+
+.breadcrumbs a {
+  display: inherit;
+  padding: 0 0.5em;
+  transition: 0.1s;
+  line-height: inherit;
+  border-radius: 5px;
+  color: $gray;
+}
+
+.breadcrumbs li:nth-child(4n+0) {color: $coral;}
+.breadcrumbs li:nth-child(4n+1) {color: $green;}
+.breadcrumbs li:nth-child(4n+2) {color: $blue;}
+.breadcrumbs li:nth-child(4n+3) {color: $yellow;}
+
+.breadcrumbs li:nth-child(4n+0) a:hover{background-color: $coral; color: $white; }
+.breadcrumbs li:nth-child(4n+1) a:hover{background-color: $green; color: $white; }
+.breadcrumbs li:nth-child(4n+2) a:hover{background-color: $blue; color: $white; }
+.breadcrumbs li:nth-child(4n+3) a:hover{background-color: $yellow; color: $white; }
+
+
+.breadcrumbs li:not(:last-child):after {
+  display: inherit;
+  content: '>';
+  margin: 0 0.5em;
+  line-height: inherit;
+}

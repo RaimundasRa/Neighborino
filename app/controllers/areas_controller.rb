@@ -20,5 +20,7 @@ class AreasController < ApplicationController
     @area = Area.find(params[:id])
     #@activities = Activity.includes(:user).where(user: {area: @area}).limit(6)
     @activities = Activity.includes(:user).where(user: {area_id: @area.id})
+
+    @breadcrumbs = [{text: @area.name, url: area_path(@area)}]
   end
 end
