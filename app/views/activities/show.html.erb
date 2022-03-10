@@ -50,12 +50,11 @@
 <div class="d-flex justify-content-between">
   <div class="col-6">
       <h4 style="padding-left: 15px; font-weight: bolder;"><small>Start date</small></h4>
-      <p style="padding-left: 15px; "><%= @activity.starts_at.strftime('%a, %d %b %Y %H:%M') %></p>
+      <p style="padding-left: 15px; "><%= @activity.starts_at.nil? ? 'No date specified' : @activity.starts_at.strftime('%a, %d %b %Y %H:%M') %></p>
   </div>
-
   <div class="col-6">
     <h4 style="font-weight: bolder;"><small>End date</small></h4>
-    <p><%= @activity.ends_at.strftime('%a, %d %b %Y %H:%M') %></p>
+    <p><%=  @activity.ends_at.nil? ? 'No date specified' : @activity.ends_at.strftime('%a, %d %b %Y %H:%M') %></p>
   </div>
 </div>
 
