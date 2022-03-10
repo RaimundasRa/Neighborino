@@ -58,3 +58,10 @@
 .landing-hero-banner form {
   text-align: center;
 }
+
+.bg-landing {
+  // background: -webkit-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  // background: -o-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  // background: -moz-linear-gradient(110deg, #f7c07d 90%, $yellow 60%);
+  background: linear-gradient(135deg, $yellow 50%, #f7c07d 50%);
+}
