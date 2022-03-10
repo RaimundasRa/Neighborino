@@ -67,7 +67,9 @@
         <p><%= activity_description_cap(activity, 85) %></p>
       </div>
     <div>
-     <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", id: "avatar-bordered" %>
+    <%= render 'shared/nav-avatar', user: activity.user %>
+
+     <%# image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", id: "avatar-bordered" %>
     </div>
     </div>
     <% end %>

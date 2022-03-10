@@ -30,3 +30,40 @@
 //   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 //   border: white 1px solid;
 // }
+
+
+.avatar-new {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 3px solid $blue;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  // margin: 20px;
+  position: relative;
+  background-color: $yellow;
+  // background-image: url(https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg);
+}
+
+
+.avatar-new:after {
+  content: attr(data-text);
+  display: block;
+  font-size: 23px;
+  font-family: $hero-font;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  color: $white;
+}
+
+.dropdown-toggle.show:after {
+  border: none;
+}
+.dropdown-toggle:after {
+  border: none;
+}
