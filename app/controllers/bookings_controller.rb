@@ -31,6 +31,7 @@ class BookingsController < ApplicationController
   def show_my_bookings
     @area = current_user.area
     @bookings = Booking.where(user: current_user)
+    @breadcrumbs = [{text: 'Manage My Bookings', url: my_bookings_path}]
   end
 
   private

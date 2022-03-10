@@ -1,13 +1,12 @@
 <%# <div class="breadcrumbs-container"> %>
   <div class="breadcrumbs">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Croydon</a></li>
-      <li><a href="#">Activities</a></li>
-      <li><a href="#">Activity name</a></li>
-      <li><a href="#">Activity name</a></li>
-      <li><a href="#">Activity name</a></li>
-      <li><a href="#">Activity name</a></li>
+      <li><a href="/">Home</a></li>
+      <% if @breadcrumbs %>
+      <% @breadcrumbs.each_with_index do |crumb, index| %>
+      <li><a href="<%= crumb[:url] %>"><%= crumb[:text] %></a></li>
+      <% end %>
+      <% end%>
     </ul>
   </div>
 <%# </div> %>
