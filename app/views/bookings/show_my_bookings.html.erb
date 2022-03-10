@@ -20,8 +20,8 @@
 
       <div class="card-product-infos">
         <h2><%= link_to booking.activity.name, area_activity_path(booking.user.area, booking.activity)%></h2>
-        <p><strong>Starts at:</strong> <%= booking.activity.starts_at.nil? ? 'no date specified' : booking.activity.starts_at.strftime('%a, %d %b %Y %H:%M') %><br>
-        <strong>Ends at: </strong> <%= booking.activity.ends_at.nil? ? 'no date specified' : booking.activity.ends_at.strftime('%a, %d %b %Y %H:%M') %><br>
+        <p><strong>Starts at:</strong> <%= booking.activity.starts_at.nil? ? 'No date specified' : booking.activity.starts_at.strftime('%a, %d %b %Y %H:%M') %><br>
+        <strong>Ends at: </strong> <%= booking.activity.ends_at.nil? ? 'No date specified' : booking.activity.ends_at.strftime('%a, %d %b %Y %H:%M') %><br>
       </div>
 
       <div style="float: right; margin-left: 50px;">
@@ -39,5 +39,3 @@
     <%= link_to "Back to area", area_path(@area), class: "btn btn-outline-primary my-3 mx-3" %>
   </div>
 </div>
-
-<%# hello %>
